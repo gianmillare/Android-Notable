@@ -1,5 +1,6 @@
 package io.gianmillare.notable;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,18 @@ public class NotableAdapter extends RecyclerView.Adapter<NotableAdapter.NoteView
 
             containerView = view.findViewById(R.id.notable_row);
             textView = view.findViewById(R.id.notable_row_text);
+
+            containerView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Note current = (Note) containerView.getTag();
+                    Intent intent = new Intent(view.getContext(), NoteActivity.class);
+                    intent.putExtra("id", current.id);
+                    intent.putExtra("contents", current.contents);
+
+                    view.getContext().startActivity(intent);
+                }
+            });
         }
     }
 
@@ -39,6 +52,7 @@ public class NotableAdapter extends RecyclerView.Adapter<NotableAdapter.NoteView
     public void onBindViewHolder(@NonNull NoteViewHolder holder, int position) {
         Note current = notes.get(position);
         holder.textView.setText(current.contents);
+        holder.containerView.setTag(current);
     }
 
     @Override
