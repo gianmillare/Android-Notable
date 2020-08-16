@@ -9,6 +9,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class NotableAdapter extends RecyclerView.Adapter<NotableAdapter.NoteViewHolder> {
     public static class NoteViewHolder extends RecyclerView.ViewHolder {
         LinearLayout containerView;
@@ -22,10 +25,19 @@ public class NotableAdapter extends RecyclerView.Adapter<NotableAdapter.NoteView
         }
     }
 
+//    Use the Note model and create an (originally) empty list
+    private List<Note> notes = new ArrayList<>();
+
     @NonNull
     @Override
     public NoteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.notable_row, parent, false);
         return NoteViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull NoteViewHolder holder, int position) {
+        Note current = notes.get(position);
+        holder.textView.setText(current.contents);
     }
 }
