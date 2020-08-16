@@ -45,4 +45,9 @@ public class NotableAdapter extends RecyclerView.Adapter<NotableAdapter.NoteView
     public int getItemCount() {
         return notes.size();
     }
+
+    public void reload() {
+        notes = MainActivity.database.noteDao().getAllNotes();
+        notifyDataSetChanged();
+    }
 }
