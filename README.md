@@ -6,9 +6,12 @@ This mobile app development project uses Java and Android Studio to create a sim
 This was my third Android application and my third attempt at coding with Java. I still require practice with the language, but the concept and steps to creating Android applications via Android Studio is becoming a repeatable process for me. I am eager to see what other Android applications I can develop.
 
 Skills used: Java, Android Studio, Mobile app design (UX/UI Design), SQLite.
+
 Gian Millare's Repository for CS50: Introduction to Computer Science by HarvardX ---> Visit Repository
 
 ---------------------------------------------------------------------------------------------------------------------------
+
+Preview 1: The below image shows the homepage of the application. User's will first see a list of all existing notes in the application.
 
 <div align="center"> 
 <img src="images/1.png">
@@ -16,17 +19,23 @@ Gian Millare's Repository for CS50: Introduction to Computer Science by HarvardX
 
 ---------------------------------------------------------------------------------------------------------------------------
 
+Preview 2: User's will be able to click into any existing note, and edit it's contents. Below is an example of adding a sentence.
+
 <div align="center"> 
 <img src="images/2.png">
 </div>
 
 ---------------------------------------------------------------------------------------------------------------------------
 
+Preview 3: Once a note is edited/updated, the note will reflect the changes via the homepage.
+
 <div align="center"> 
 <img src="images/3.png">
 </div>
 
 ---------------------------------------------------------------------------------------------------------------------------
+
+Preview 4: User's may also create new notes that will be added to the applications database. Here is an image of a new note created after clicking the blue button.
 
 <div align="center"> 
 <img src="images/4.png">
