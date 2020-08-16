@@ -7,7 +7,7 @@ This was my third Android application and my third attempt at coding with Java. 
 
 Skills used: Java, Android Studio, Mobile app design (UX/UI Design), SQLite.
 
-Gian Millare's Repository for CS50: Introduction to Computer Science by HarvardX ---> Visit Repository
+Gian Millare's Repository for CS50: Introduction to Computer Science by HarvardX ---> [Visit Repository](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science)
 
 ---------------------------------------------------------------------------------------------------------------------------
 
