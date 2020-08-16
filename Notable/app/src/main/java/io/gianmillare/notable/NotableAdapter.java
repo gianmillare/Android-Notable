@@ -32,12 +32,17 @@ public class NotableAdapter extends RecyclerView.Adapter<NotableAdapter.NoteView
     @Override
     public NoteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.notable_row, parent, false);
-        return NoteViewHolder(view);
+        return new NoteViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull NoteViewHolder holder, int position) {
         Note current = notes.get(position);
         holder.textView.setText(current.contents);
+    }
+
+    @Override
+    public int getItemCount() {
+        return notes.size();
     }
 }
